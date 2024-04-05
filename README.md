@@ -54,3 +54,22 @@ This web app is built using React JS. It allows the user to select the criteria 
 ### Score Board Page 
 
 <br/>
+
+## Deploy to docker -
+
+ # Ensure Docker is installed on your PC and Docker Desktop is running seamlessly in the background.
+
+1. Navigate to the directory where the Dockerfile exists.
+
+2. After navigating to the directory run the command given below -
+      "docker build -t <image-name> ." 
+      here -t means tag and its followed by image_name you can give the name of image whichever you want but give the name in smallcase.
+
+ 3. After building the docker image run the docker image using the below command -
+      "docker run -d -p 8000:80 <image-name>"
+      here -d = detached mode
+           -p = port mapping <localhost:containerPort>
+
+4. use the command "docker ps" to check whether the conatiner is running or not.
+
+5. Navigate to localhost:8080 of your PC and thats it you will see your application is running on docker.
